@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Horario Restaurante</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid black; padding: 8px; height: 60px; }
+    td { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h3>Horario del restaurante</h3>
+<p>Haz clic en una celda para indicar la persona, las horas y el color.</p>
+
+<table id="horario">
+  <thead>
+    <tr>
+      <th>Turno / Día</th>
+      <th>Lunes</th><th>Martes</th><th>Miércoles</th>
+      <th>Jueves</th><th>Viernes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>09:00-10:00</th>
+      <td></td><td></td><td></td><td rowspan = "2"></td><td></td>
+    </tr>
+    <tr>
+      <th>10:00-11:00</th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th>11:00-11:50</th>
+      <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td colspan="6" style="background-color: grey" style="color: red;" style = "text-align: center;" ><p>DESCANSO</p></td>
+    </tr>
+    <tr>
+      <th>12:10-13:00</th>
+      <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th>13:00-14:00</th>
+      <td></td><td></td><td></td><td rowspan ="2"></td><td></td>
+    </tr>
+    <tr>
+      <th>14:00-15:00</th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<script>
+
+  document.querySelectorAll("#horario tbody td").forEach(td => {
+    td.addEventListener("click", () => {
+
+      const persona = prompt("Nombre de la persona:");
+      if (persona === null) return;
+
+      const horas = prompt("Número de horas:");
+      if (horas === null || isNaN(horas)) {
+        alert("Debes introducir un número de horas válido.");
+        return;
+      }
+
+      const color = prompt("Elige un color: red, blue, green, pink, purple, yellow");
+        td.style.backgroundColor = color.toLowerCase();
+        td.innerHTML = "<b>" + persona + "</b><br>" + horas + " horas";
+    });
+  });
+</script>
+
+</body>
+</html>

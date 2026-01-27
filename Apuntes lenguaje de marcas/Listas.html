@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Listas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        .example {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .code-example {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Página dedicada a mostrar todos los tipos de listas en HTML -->
+    
+    <h1>Todos los Tipos de Listas en HTML</h1>
+    
+    <div class="example">
+        <h2>1. Lista No Ordenada (ul) - Básica</h2>
+        <!-- ul crea listas con viñetas, li define cada elemento -->
+        <p><strong>Descripción:</strong> Lista con viñetas (bullets) sin orden específico</p>
+        <ul>
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+            <li>Tercer elemento</li>
+            <li>Cuarto elemento</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h2>2. Lista No Ordenada - Diferentes Tipos de Viñetas</h2>
+        <!-- Se pueden cambiar los tipos de viñetas con CSS -->
+        <p><strong>Viñetas tipo disco (por defecto):</strong></p>
+        <ul style="list-style-type: disc;">
+            <li>Manzanas</li>
+            <li>Naranjas</li>
+            <li>Plátanos</li>
+        </ul>
+
+        <p><strong>Viñetas tipo círculo:</strong></p>
+        <ul style="list-style-type: circle;">
+            <li>Rojo</li>
+            <li>Verde</li>
+            <li>Azul</li>
+        </ul>
+
+        <p><strong>Viñetas tipo cuadrado:</strong></p>
+        <ul style="list-style-type: square;">
+            <li>Casa</li>
+            <li>Trabajo</li>
+            <li>Escuela</li>
+        </ul>
+
+        <p><strong>Sin viñetas:</strong></p>
+        <ul style="list-style-type: none;">
+            <li>Elemento sin viñeta</li>
+            <li>Otro elemento sin viñeta</li>
+            <li>Tercer elemento sin viñeta</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h2>3. Lista Ordenada (ol) - Básica</h2>
+        <!-- ol crea listas numeradas, li define cada elemento -->
+        <p><strong>Descripción:</strong> Lista con números en orden secuencial</p>
+        <ol>
+            <li>Primer paso</li>
+            <li>Segundo paso</li>
+            <li>Tercer paso</li>
+            <li>Cuarto paso</li>
+        </ol>
+    </div>
+
+    <div class="example">
+        <h2>4. Lista Ordenada - Diferentes Tipos de Numeración</h2>
+        <!-- Se pueden cambiar los tipos de numeración -->
+        <p><strong>Números decimales (por defecto):</strong></p>
+        <ol type="1">
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+        </ol>
+
+        <p><strong>Letras minúsculas:</strong></p>
+        <ol type="a">
+            <li>Punto a</li>
+            <li>Punto b</li>
+            <li>Punto c</li>
+        </ol>
+
+        <p><strong>Letras mayúsculas:</strong></p>
+        <ol type="A">
+            <li>Sección A</li>
+            <li>Sección B</li>
+            <li>Sección C</li>
+        </ol>
+
+        <p><strong>Números romanos minúsculas:</strong></p>
+        <ol type="i">
+            <li>Capítulo i</li>
+            <li>Capítulo ii</li>
+            <li>Capítulo iii</li>
+        </ol>
+
+        <p><strong>Números romanos mayúsculas:</strong></p>
+        <ol type="I">
+            <li>Parte I</li>
+            <li>Parte II</li>
+            <li>Parte III</li>
+        </ol>
+    </div>
+
+    <div class="example">
+        <h2>5. Lista Ordenada - Empezando en Número Específico</h2>
+        <!-- start permite comenzar la numeración en un valor específico -->
+        <p><strong>Lista que empieza en 5:</strong></p>
+        <ol start="5">
+            <li>Quinto elemento</li>
+            <li>Sexto elemento</li>
+            <li>Séptimo elemento</li>
+        </ol>
+
+        <p><strong>Lista que empieza en 100:</strong></p>
+        <ol start="100">
+            <li>Elemento 100</li>
+            <li>Elemento 101</li>
+            <li>Elemento 102</li>
+        </ol>
+    </div>
+
+    <div class="example">
+        <h2>6. Lista de Definiciones (dl)</h2>
+        <!-- dl crea listas de definiciones, dt para términos, dd para definiciones -->
+        <p><strong>Descripción:</strong> Lista para términos y sus definiciones</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language - Lenguaje de marcado para crear páginas web</dd>
+            
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets - Lenguaje para dar estilo a páginas web</dd>
+            
+            <dt>JavaScript</dt>
+            <dd>Lenguaje de programación para añadir interactividad a las páginas web</dd>
+            
+            <dt>Responsive Design</dt>
+            <dd>Diseño web que se adapta a diferentes tamaños de pantalla</dd>
+        </dl>
+    </div>
+
+    <div class="example">
+        <h2>7. Listas Anidadas</h2>
+        <!-- Las listas se pueden anidar unas dentro de otras -->
+        <p><strong>Lista no ordenada con sublistas:</strong></p>
+        <ul>
+            <li>Frutas
+                <ul>
+                    <li>Manzanas
+                        <ul>
+                            <li>Rojas</li>
+                            <li>Verdes</li>
+                        </ul>
+                    </li>
+                    <li>Naranjas</li>
+                    <li>Plátanos</li>
+                </ul>
+            </li>
+            <li>Verduras
+                <ul>
+                    <li>Lechuga</li>
+                    <li>Tomates</li>
+                    <li>Zanahorias</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p><strong>Lista ordenada con sublistas:</strong></p>
+        <ol>
+            <li>Preparar ingredientes
+                <ol type="a">
+                    <li>Lavar verduras</li>
+                    <li>Cortar cebolla</li>
+                    <li>Pelar patatas</li>
+                </ol>
+            </li>
+            <li>Cocinar
+                <ol type="a">
+                    <li>Calentar aceite</li>
+                    <li>Freír cebolla</li>
+                    <li>Añadir verduras</li>
+                </ol>
+            </li>
+            <li>Servir
+                <ol type="a">
+                    <li>Emplatar</li>
+                    <li>Decorar</li>
+                    <li>Acompañar</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <div class="example">
+        <h2>8. Lista Mixta (Ordenada y No Ordenada)</h2>
+        <!-- Ejemplo de combinación de diferentes tipos de listas -->
+        <p><strong>Menú de restaurante:</strong></p>
+        <ol>
+            <li>Entrantes
+                <ul>
+                    <li>Ensalada mixta</li>
+                    <li>Sopa del día</li>
+                    <li>Croquetas caseras</li>
+                </ul>
+            </li>
+            <li>Platos principales
+                <ul>
+                    <li>Pescado a la plancha</li>
+                    <li>Carne asada</li>
+                    <li>Pasta italiana</li>
+                </ul>
+            </li>
+            <li>Postres
+                <ul>
+                    <li>Flan casero</li>
+                    <li>Helado</li>
+                    <li>Fruta de temporada</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="example">
+        <h2>9. Lista de Definiciones Compleja</h2>
+        <!-- Ejemplo más complejo de lista de definiciones -->
+        <dl>
+            <dt>Frontend</dt>
+            <dd>Parte de una aplicación web que interactúa directamente con el usuario</dd>
+            <dd>Incluye HTML, CSS y JavaScript</dd>
+            
+            <dt>Backend</dt>
+            <dd>Parte del servidor que procesa la lógica de la aplicación</dd>
+            <dd>Maneja bases de datos y APIs</dd>
+            
+            <dt>Full Stack</dt>
+            <dd>Desarrollador que trabaja tanto en frontend como backend</dd>
+        </dl>
+    </div>
+
+    <div class="example">
+        <h2>10. Lista con Elementos de Diferentes Tipos</h2>
+        <!-- Lista que contiene diferentes tipos de contenido -->
+        <ul>
+            <li><strong>Texto en negrita:</strong> Elemento importante</li>
+            <li><em>Texto en cursiva:</em> Elemento enfatizado</li>
+            <li><a href="#">Enlace:</a> Elemento clickeable</li>
+            <li><code>Código:</code> Elemento de código</li>
+            <li>Texto normal con <mark>texto destacado</mark></li>
+            <li>Fórmula: H<sub>2</sub>O y E=mc<sup>2</sup></li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h2>11. Lista Ordenada Reversa</h2>
+        <!-- Lista ordenada en orden inverso -->
+        <p><strong>Countdown:</strong></p>
+        <ol reversed>
+            <li>Preparar</li>
+            <li>Apuntar</li>
+            <li>¡Fuego!</li>
+        </ol>
+    </div>
+
+    <hr>
+    <!-- Separador final -->
+    
+    <footer>
+        <p><em>Esta página demuestra todos los tipos de listas disponibles en HTML con ejemplos prácticos</em></p>
+        <!-- Comentario: Footer explicativo -->
+    </footer>
+
+</body>
+</html>

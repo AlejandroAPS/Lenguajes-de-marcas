@@ -1,0 +1,558 @@
+
+Tablas, listas y formularios
+María Luz Fernández Gismero
+•
+30 sept
+Códigos de repaso de listas, tablas y formularios
+tablasHTML.html
+HTML
+
+listasHTML.html
+HTML
+
+formularioHTML.html
+HTML
+
+Comentarios de la clase
+
+Añade un comentario de clase…
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML Completo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .form-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        .form-section h2 {
+            color: #495057;
+            margin-top: 0;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 8px;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        .inline-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .inline-group > div {
+            flex: 1;
+            min-width: 200px;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .checkbox-item input, .radio-item input {
+            width: auto;
+            margin: 0;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        button, input[type="submit"], input[type="reset"] {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        .btn-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #7f8c8d;
+        }
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+        .range-display {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        fieldset {
+            border: 2px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #495057;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        .form-hint {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Formulario completo con todos los tipos de campos HTML -->
+    
+    <div class="form-container">
+        <h1>Formulario HTML Completo</h1>
+        <p style="text-align: center; color: #6c757d;">
+            <em>Ejemplo completo con todos los tipos de campos de formulario disponibles en HTML5</em>
+        </p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <!-- SECCIÓN 1: CAMPOS DE TEXTO -->
+            <div class="form-section">
+                <h2>1. Campos de Texto</h2>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="texto-simple">Texto simple <span class="required">*</span></label>
+                        <input type="text" id="texto-simple" name="texto_simple" placeholder="Escribe aquí..." required>
+                        <div class="form-hint">Campo de texto básico</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="texto-readonly">Texto solo lectura</label>
+                        <input type="text" id="texto-readonly" name="texto_readonly" value="No se puede editar" readonly>
+                        <div class="form-hint">Campo de solo lectura</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Tu contraseña" required minlength="8">
+                    <div class="form-hint">Mínimo 8 caracteres</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="textarea">Área de texto</label>
+                    <textarea id="textarea" name="comentarios" rows="4" cols="50" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <div class="form-hint">Máximo 500 caracteres</div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: CAMPOS DE ENTRADA ESPECÍFICOS -->
+            <div class="form-section">
+                <h2>2. Campos de Entrada Específicos</h2>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+                    </div>
+                </div>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="url">Página web</label>
+                        <input type="url" id="url" name="website" placeholder="https://www.ejemplo.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="busqueda">Búsqueda</label>
+                        <input type="search" id="busqueda" name="busqueda" placeholder="Buscar...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: CAMPOS NUMÉRICOS Y DE RANGO -->
+            <div class="form-section">
+                <h2>3. Campos Numéricos y de Rango</h2>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input type="number" id="numero" name="edad" min="18" max="100" step="1" placeholder="25">
+                        <div class="form-hint">Entre 18 y 100</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rango">Rango de satisfacción</label>
+                        <input type="range" id="rango" name="satisfaccion" min="0" max="10" value="5" oninput="document.getElementById('rango-valor').textContent = this.value">
+                        <div class="range-display">Valor: <span id="rango-valor">5</span>/10</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: CAMPOS DE FECHA Y HORA -->
+            <div class="form-section">
+                <h2>4. Campos de Fecha y Hora</h2>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha_nacimiento">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora_preferida">
+                    </div>
+                </div>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="fecha-hora">Fecha y hora</label>
+                        <input type="datetime-local" id="fecha-hora" name="fecha_hora_cita">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mes">Mes</label>
+                        <input type="month" id="mes" name="mes_inicio">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="semana">Semana</label>
+                    <input type="week" id="semana" name="semana_vacaciones">
+                </div>
+            </div>
+
+            <!-- SECCIÓN 5: SELECCIONES Y OPCIONES -->
+            <div class="form-section">
+                <h2>5. Selecciones y Opciones</h2>
+                
+                <div class="form-group">
+                    <label for="select-simple">Selección simple</label>
+                    <select id="select-simple" name="pais" required>
+                        <option value="">-- Selecciona un país --</option>
+                        <option value="es">España</option>
+                        <option value="fr">Francia</option>
+                        <option value="it">Italia</option>
+                        <option value="de">Alemania</option>
+                        <option value="pt">Portugal</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="select-multiple">Selección múltiple</label>
+                    <select id="select-multiple" name="idiomas[]" multiple size="4">
+                        <option value="es">Español</option>
+                        <option value="en">Inglés</option>
+                        <option value="fr">Francés</option>
+                        <option value="de">Alemán</option>
+                        <option value="it">Italiano</option>
+                        <option value="pt">Portugués</option>
+                    </select>
+                    <div class="form-hint">Mantén Ctrl/Cmd para seleccionar múltiples opciones</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="select-grupos">Selección con grupos</label>
+                    <select id="select-grupos" name="ciudad">
+                        <option value="">-- Selecciona una ciudad --</option>
+                        <optgroup label="España">
+                            <option value="madrid">Madrid</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="valencia">Valencia</option>
+                        </optgroup>
+                        <optgroup label="Francia">
+                            <option value="paris">París</option>
+                            <option value="lyon">Lyon</option>
+                            <option value="marseille">Marsella</option>
+                        </optgroup>
+                        <optgroup label="Italia">
+                            <option value="roma">Roma</option>
+                            <option value="milano">Milán</option>
+                            <option value="napoli">Nápoles</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 6: BOTONES DE RADIO -->
+            <div class="form-section">
+                <h2>6. Botones de Radio (Radio Buttons)</h2>
+                
+                <fieldset>
+                    <legend>Género <span class="required">*</span></legend>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="masculino" name="genero" value="masculino" required>
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="femenino" name="genero" value="femenino" required>
+                            <label for="femenino">Femenino</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="otro" name="genero" value="otro" required>
+                            <label for="otro">Otro</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="no-especificar" name="genero" value="no_especificar" required>
+                            <label for="no-especificar">Prefiero no especificar</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Tamaño de camiseta</legend>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="xs" name="talla" value="xs">
+                            <label for="xs">XS (Extra Small)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="s" name="talla" value="s">
+                            <label for="s">S (Small)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="m" name="talla" value="m" checked>
+                            <label for="m">M (Medium) - Recomendado</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="l" name="talla" value="l">
+                            <label for="l">L (Large)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="xl" name="talla" value="xl">
+                            <label for="xl">XL (Extra Large)</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- SECCIÓN 7: CASILLAS DE VERIFICACIÓN -->
+            <div class="form-section">
+                <h2>7. Casillas de Verificación (Checkboxes)</h2>
+                
+                <fieldset>
+                    <legend>Intereses y hobbies</legend>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="deportes" name="intereses[]" value="deportes">
+                            <label for="deportes">Deportes</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="musica" name="intereses[]" value="musica" checked>
+                            <label for="musica">Música</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lectura" name="intereses[]" value="lectura">
+                            <label for="lectura">Lectura</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="viajes" name="intereses[]" value="viajes">
+                            <label for="viajes">Viajes</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="tecnologia" name="intereses[]" value="tecnologia" checked>
+                            <label for="tecnologia">Tecnología</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cocina" name="intereses[]" value="cocina">
+                            <label for="cocina">Cocina</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Suscripciones</legend>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="newsletter" name="suscripciones[]" value="newsletter">
+                            <label for="newsletter">Newsletter semanal</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="ofertas" name="suscripciones[]" value="ofertas">
+                            <label for="ofertas">Ofertas especiales</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="eventos" name="suscripciones[]" value="eventos">
+                            <label for="eventos">Notificaciones de eventos</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div class="form-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terminos" name="terminos" value="aceptado" required>
+                        <label for="terminos">Acepto los <a href="#" target="_blank">términos y condiciones</a> <span class="required">*</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 8: CAMPOS DE ARCHIVO Y COLOR -->
+            <div class="form-section">
+                <h2>8. Campos Especiales</h2>
+                
+                <div class="form-group">
+                    <label for="archivo">Subir archivo</label>
+                    <input type="file" id="archivo" name="curriculum" accept=".pdf,.doc,.docx">
+                    <div class="form-hint">Formatos permitidos: PDF, DOC, DOCX</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="multiples-archivos">Subir múltiples imágenes</label>
+                    <input type="file" id="multiples-archivos" name="imagenes[]" multiple accept="image/*">
+                    <div class="form-hint">Selecciona una o más imágenes</div>
+                </div>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="color">Color favorito</label>
+                        <input type="color" id="color" name="color_favorito" value="#3498db">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="oculto-demo">Campo oculto (no visible)</label>
+                        <input type="hidden" id="oculto-demo" name="campo_oculto" value="valor_secreto">
+                        <div style="padding: 10px; background: #f8f9fa; border: 1px dashed #dee2e6; border-radius: 3px;">
+                            <small>Hay un campo oculto con valor "valor_secreto"</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 9: CAMPOS AVANZADOS HTML5 -->
+            <div class="form-section">
+                <h2>9. Campos Avanzados HTML5</h2>
+                
+                <div class="form-group">
+                    <label for="datalist">Lista de datos (con autocompletado)</label>
+                    <input type="text" id="datalist" name="navegador" list="navegadores" placeholder="Escribe para ver sugerencias">
+                    <datalist id="navegadores">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                        <option value="Edge">
+                        <option value="Opera">
+                    </datalist>
+                    <div class="form-hint">Empieza a escribir para ver sugerencias</div>
+                </div>
+                
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="patron">Campo con patrón (solo letras)</label>
+                        <input type="text" id="patron" name="solo_letras" pattern="[A-Za-z]+" title="Solo se permiten letras" placeholder="Solo letras">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maxlength">Máximo 20 caracteres</label>
+                        <input type="text" id="maxlength" name="corto" maxlength="20" placeholder="Máximo 20 caracteres">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 10: BOTONES -->
+            <div class="form-section">
+                <h2>10. Tipos de Botones</h2>
+                
+                <div class="button-group">
+                    <input type="submit" value="Enviar Formulario" class="btn-primary">
+                    <input type="reset" value="Limpiar Formulario" class="btn-secondary">
+                    <button type="button" class="btn-danger" onclick="alert('Botón personalizado clickeado!')">Botón Personalizado</button>
+                </div>
+                
+                <div style="margin-top: 15px; text-align: center;">
+                    <button type="button" disabled class="btn-secondary">Botón Deshabilitado</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- JavaScript para mejorar la interactividad -->
+    <script>
+        // Mostrar valor del range en tiempo real
+        document.getElementById('rango').addEventListener('input', function() {
+            document.getElementById('rango-valor').textContent = this.value;
+        });
+        
+        // Validación personalizada al enviar
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Formulario enviado exitosamente!\n\nEste es solo un ejemplo, en un caso real se enviarían los datos al servidor.');
+        });
+        
+        // Confirmación antes de limpiar
+        document.querySelector('input[type="reset"]').addEventListener('click', function(e) {
+            if (!confirm('¿Estás seguro de que quieres limpiar todo el formulario?')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

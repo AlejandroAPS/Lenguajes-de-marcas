@@ -1,0 +1,92 @@
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+
+.Texto_izquierda_titulo{
+    margin-left: 15%;
+    color: red;
+}       
+.Texto_izquierda_{
+    margin-left: 15%;
+    color: #333;
+    margin-right: 75%;
+}
+.imagen_izquierda{
+    margin-left:50%;
+}
+.header{
+    margin-left: 43%;
+    color: darkorchid;
+    border: #555 ;
+}
+body{
+    background-color: turquoise;
+}
+footer{
+    background-color: #555;
+    color: rgb(209, 209, 209);
+    position: absolute;
+    bottom:1%;
+    padding-left: 90%;
+    /* NO TENGO NI IDEA DE COMO HACER ESTO JAJAJAJAJA yo he puesto esto y mas o menos se parece no? */
+    /* A lo que me refiero es que no me acuerdo de como ponerlo abajo del todo el cuadrado en la página y que no se vea ese pequeño hueco abajo y a la derecha */
+}
+.Lista_actividades{
+    background-color: chartreuse;
+}
+
+.Imagen1{
+    margin-left: 1%;
+    
+}
+
+.color:hover{
+    width: 50px;
+    height: 50px;
+}
+
+.ListaActividades2{
+    color: blue;
+    font: 400;
+}
+
+.tabla{
+    color: brown;
+    font-size: xx-large;
+    margin-left: 25%;
+    border: #333;
+    margin-right: 37%;
+}
+
+.ultimaimagen{
+    margin-left: 5%;
+    margin-top: 1%;
+}

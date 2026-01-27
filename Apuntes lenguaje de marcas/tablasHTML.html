@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Tablas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        .example {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #27ae60;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #27ae60;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        .table-basic th {
+            background-color: #e74c3c;
+        }
+        .table-advanced th {
+            background-color: #9b59b6;
+        }
+        .table-complex th {
+            background-color: #f39c12;
+        }
+        .table-styled th {
+            background-color: #1abc9c;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .numeric {
+            text-align: right;
+        }
+        .center {
+            text-align: center;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Página dedicada a mostrar ejemplos completos de tablas HTML -->
+    
+    <h1>Ejemplos Completos de Tablas HTML</h1>
+    
+    <div class="example">
+        <h2>1. Tabla Básica Simple</h2>
+        <!-- Tabla básica con encabezados y datos simples -->
+        <p><strong>Descripción:</strong> Tabla básica con encabezados (&lt;th&gt;) y celdas de datos (&lt;td&gt;)</p>
+        <table class="table-basic">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+            <tr>
+                <td>Ana García</td>
+                <td>25</td>
+                <td>Madrid</td>
+            </tr>
+            <tr>
+                <td>Carlos López</td>
+                <td>32</td>
+                <td>Barcelona</td>
+            </tr>
+            <tr>
+                <td>María Rodríguez</td>
+                <td>28</td>
+                <td>Valencia</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>2. Tabla con Estructura Completa</h2>
+        <!-- Tabla con thead, tbody y tfoot -->
+        <p><strong>Descripción:</strong> Tabla con estructura semántica completa usando &lt;thead&gt;, &lt;tbody&gt; y &lt;tfoot&gt;</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laptop</td>
+                    <td class="numeric">899.99 €</td>
+                    <td class="center">2</td>
+                    <td class="numeric">1,799.98 €</td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td class="numeric">25.50 €</td>
+                    <td class="center">3</td>
+                    <td class="numeric">76.50 €</td>
+                </tr>
+                <tr>
+                    <td>Teclado</td>
+                    <td class="numeric">79.99 €</td>
+                    <td class="center">1</td>
+                    <td class="numeric">79.99 €</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="highlight">
+                    <td colspan="3"><strong>TOTAL GENERAL</strong></td>
+                    <td class="numeric"><strong>1,956.47 €</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>3. Tabla con COLSPAN - Fusión de Columnas</h2>
+        <!-- Tabla que demuestra el uso de colspan -->
+        <p><strong>Descripción:</strong> Tabla con celdas que abarcan múltiples columnas usando <code>colspan</code></p>
+        <table class="table-advanced">
+            <tr>
+                <th colspan="4">Horario de Clases - Semana del 17 al 21 de Junio</th>
+            </tr>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+            </tr>
+            <tr>
+                <td>9:00 - 10:00</td>
+                <td>Matemáticas</td>
+                <td>Historia</td>
+                <td>Ciencias</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td colspan="2">Educación Física (Gimnasio)</td>
+                <td>Literatura</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <td>Inglés</td>
+                <td>Matemáticas</td>
+                <td>Inglés</td>
+            </tr>
+            <tr>
+                <td>12:00 - 13:00</td>
+                <td colspan="3">Recreo</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>4. Tabla con ROWSPAN - Fusión de Filas</h2>
+        <!-- Tabla que demuestra el uso de rowspan -->
+        <p><strong>Descripción:</strong> Tabla con celdas que abarcan múltiples filas usando <code>rowspan</code></p>
+        <table class="table-advanced">
+            <tr>
+                <th>Departamento</th>
+                <th>Empleado</th>
+                <th>Cargo</th>
+                <th>Salario</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Ventas</td>
+                <td>Juan Pérez</td>
+                <td>Director de Ventas</td>
+                <td class="numeric">3,500 €</td>
+            </tr>
+            <tr>
+                <td>Laura Martín</td>
+                <td>Vendedora Senior</td>
+                <td class="numeric">2,800 €</td>
+            </tr>
+            <tr>
+                <td>Roberto Silva</td>
+                <td>Vendedor Junior</td>
+                <td class="numeric">2,200 €</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Marketing</td>
+                <td>Elena Ruiz</td>
+                <td>Jefa de Marketing</td>
+                <td class="numeric">3,200 €</td>
+            </tr>
+            <tr>
+                <td>David Castro</td>
+                <td>Diseñador Gráfico</td>
+                <td class="numeric">2,600 €</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>5. Tabla Compleja - COLSPAN y ROWSPAN Combinados</h2>
+        <!-- Tabla compleja que combina colspan y rowspan -->
+        <p><strong>Descripción:</strong> Tabla avanzada que combina tanto <code>colspan</code> como <code>rowspan</code></p>
+        <table class="table-complex">
+            <tr>
+                <th colspan="5">Informe de Ventas Trimestrales 2024</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Región</th>
+                <th rowspan="2">Vendedor</th>
+                <th colspan="3">Trimestres</th>
+            </tr>
+            <tr>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Norte</td>
+                <td>Ana García</td>
+                <td class="numeric">45,000 €</td>
+                <td class="numeric">52,000 €</td>
+                <td class="numeric">48,000 €</td>
+            </tr>
+            <tr>
+                <td>Carlos López</td>
+                <td class="numeric">38,000 €</td>
+                <td class="numeric">41,000 €</td>
+                <td class="numeric">44,000 €</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Sur</td>
+                <td>María Rodríguez</td>
+                <td class="numeric">35,000 €</td>
+                <td class="numeric">39,000 €</td>
+                <td class="numeric">42,000 €</td>
+            </tr>
+            <tr>
+                <td>José Martínez</td>
+                <td class="numeric">41,000 €</td>
+                <td class="numeric">45,000 €</td>
+                <td class="numeric">47,000 €</td>
+            </tr>
+            <tr class="highlight">
+                <td colspan="2"><strong>TOTAL POR TRIMESTRE</strong></td>
+                <td class="numeric"><strong>159,000 €</strong></td>
+                <td class="numeric"><strong>177,000 €</strong></td>
+                <td class="numeric"><strong>181,000 €</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>6. Tabla de Productos con Fusiones Mixtas</h2>
+        <!-- Otra tabla compleja con ejemplo práctico -->
+        <p><strong>Descripción:</strong> Tabla de catálogo de productos con agrupaciones</p>
+        <table class="table-styled">
+            <tr>
+                <th colspan="4">Catálogo de Productos - Electrónicos</th>
+            </tr>
+            <tr>
+                <th>Categoría</th>
+                <th>Producto</th>
+                <th>Especificaciones</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Smartphones</td>
+                <td>iPhone 15 Pro</td>
+                <td>128GB, A17 Pro</td>
+                <td class="numeric">1,199 €</td>
+            </tr>
+            <tr>
+                <td>Samsung Galaxy S24</td>
+                <td>256GB, Snapdragon 8 Gen 3</td>
+                <td class="numeric">899 €</td>
+            </tr>
+            <tr>
+                <td>Google Pixel 8</td>
+                <td>128GB, Tensor G3</td>
+                <td class="numeric">699 €</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Laptops</td>
+                <td>MacBook Air M3</td>
+                <td>8GB RAM, 256GB SSD</td>
+                <td class="numeric">1,399 €</td>
+            </tr>
+            <tr>
+                <td>Dell XPS 13</td>
+                <td>16GB RAM, 512GB SSD</td>
+                <td class="numeric">1,299 €</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>PRECIO PROMEDIO</strong></td>
+                <td class="numeric highlight"><strong>1,079 €</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>7. Tabla de Notas Académicas</h2>
+        <!-- Tabla académica con estructura compleja -->
+        <p><strong>Descripción:</strong> Tabla de calificaciones con promedios y totales</p>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Estudiante</th>
+                    <th colspan="3">Matemáticas</th>
+                    <th colspan="2">Ciencias</th>
+                    <th rowspan="2">Promedio</th>
+                </tr>
+                <tr>
+                    <th>Álgebra</th>
+                    <th>Geometría</th>
+                    <th>Estadística</th>
+                    <th>Física</th>
+                    <th>Química</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pedro Sánchez</td>
+                    <td class="center">8.5</td>
+                    <td class="center">7.8</td>
+                    <td class="center">9.2</td>
+                    <td class="center">8.0</td>
+                    <td class="center">7.5</td>
+                    <td class="center highlight">8.2</td>
+                </tr>
+                <tr>
+                    <td>Lucía Fernández</td>
+                    <td class="center">9.1</td>
+                    <td class="center">8.7</td>
+                    <td class="center">8.9</td>
+                    <td class="center">9.3</td>
+                    <td class="center">8.8</td>
+                    <td class="center highlight">9.0</td>
+                </tr>
+                <tr>
+                    <td>Miguel Torres</td>
+                    <td class="center">7.2</td>
+                    <td class="center">6.8</td>
+                    <td class="center">7.5</td>
+                    <td class="center">7.1</td>
+                    <td class="center">6.9</td>
+                    <td class="center highlight">7.1</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="highlight">
+                    <td><strong>Promedio por Materia</strong></td>
+                    <td class="center"><strong>8.3</strong></td>
+                    <td class="center"><strong>7.8</strong></td>
+                    <td class="center"><strong>8.5</strong></td>
+                    <td class="center"><strong>8.1</strong></td>
+                    <td class="center"><strong>7.7</strong></td>
+                    <td class="center"><strong>8.1</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="example">
+        <h2>8. Tabla de Calendario Mensual</h2>
+        <!-- Tabla que simula un calendario -->
+        <p><strong>Descripción:</strong> Calendario usando tabla con estructura de días de la semana</p>
+        <table>
+            <tr>
+                <th colspan="7">Junio 2025</th>
+            </tr>
+            <tr>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mié</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sáb</th>
+                <th>Dom</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="center">1</td>
+            </tr>
+            <tr>
+                <td class="center">2</td>
+                <td class="center">3</td>
+                <td class="center">4</td>
+                <td class="center">5</td>
+                <td class="center">6</td>
+                <td class="center">7</td>
+                <td class="center">8</td>
+            </tr>
+            <tr>
+                <td class="center">9</td>
+                <td class="center">10</td>
+                <td class="center">11</td>
+                <td class="center">12</td>
+                <td class="center">13</td>
+                <td class="center">14</td>
+                <td class="center">15</td>
+            </tr>
+            <tr>
+                <td class="center">16</td>
+                <td class="center">17</td>
+                <td class="center">18</td>
+                <td class="center">19</td>
+                <td class="center">20</td>
+                <td class="center">21</td>
+                <td class="center">22</td>
+            </tr>
+            <tr>
+                <td class="center">23</td>
+                <td class="center highlight">24</td>
+                <td class="center">25</td>
+                <td class="center">26</td>
+                <td class="center">27</td>
+                <td class="center">28</td>
+                <td class="center">29</td>
+            </tr>
+            <tr>
+                <td class="center">30</td>
+                <td colspan="6"></td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+    <!-- Separador final -->
+    
+    <footer>
+        <p><em>Esta página demuestra el uso completo de tablas HTML con ejemplos prácticos de colspan y rowspan</em></p>
+        <!-- Comentario: Explicación de las tablas mostradas -->
+    </footer>
+
+</body>
+</html>
