@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de decks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Generador de Decks </h1>
+
+    <form id="recipeForm">
+    <div>
+        <label for="strategy">Nombre de la estrategia:</label>
+        <input type="text" id="strategy" placeholder="Ej: dragapult">
+    </div>
+
+    <div>
+        <label>Variante:</label>
+        <div id="customSelect" class="custom-select">
+            <div class="selected">Selecciona una estrategia primero</div>
+            <div class="options"></div>
+        </div>
+    </div>
+
+
+        <button type="submit">Generar deck</button>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
