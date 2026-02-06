@@ -3,14 +3,16 @@ const strategies = {
   "dragapult": [
     {name: "Dragapult Charizard", sprite: "sprites/dragapult_charizard.png"},
     {name: "Dragapult Dusknoir", sprite: "sprites/dragapult_dusknoir.png"},
-    {name: "Dragapult Blaziken", sprite: "sprites/dragapult.png", sprite: "sprites/blaziken.png"}
+    {name: "Dragapult Blaziken", sprite: "sprites/dragapult_blaziken.png"}
   ],
   "miraidon": [
-    {name: "Miraidon Eelektrik", sprite: "sprites/miraido0n_eelektrik.png"},
+    {name: "Miraidon Eelektrik", sprite: "sprites/Miraidon_eelektrik.png"},
     {name: "Miraidon Magneton", sprite: "sprites/miraidon_magneton.png"},
     {name: "Miraidon Joltik", sprite: "sprites/miraidon_joltik.png"}
   ]
 };
+let selectedVariant = null;
+
 
 
 
@@ -38,9 +40,27 @@ strategyInput.addEventListener("input", () => {
       optionsDiv.appendChild(div);
 
       div.addEventListener("click", () => {
-        selectedDiv.textContent = variant.name;
-        optionsDiv.style.display = "none";
-      });
+
+        selectedDiv.innerHTML = "";
+
+
+      const imgSelected = document.createElement("img");
+      imgSelected.src = variant.sprite;
+      imgSelected.alt = variant.name;
+      imgSelected.classList.add("selected-img");
+
+
+      const text = document.createElement("span");
+      text.textContent = variant.name;
+
+
+      selectedDiv.appendChild(imgSelected);
+      selectedDiv.appendChild(text);
+
+
+      optionsDiv.style.display = "none";
+    });
+
     });
     optionsDiv.style.display = "block";
   } else {

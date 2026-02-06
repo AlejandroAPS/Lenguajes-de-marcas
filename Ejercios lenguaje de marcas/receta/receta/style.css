@@ -40,3 +40,14 @@
 .option:hover {
   background-color: #eee;
 }
+
+.selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selected img {
+  width: 128px;
+  height: 64px;
+}
