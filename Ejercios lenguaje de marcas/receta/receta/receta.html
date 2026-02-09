@@ -2,33 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Generador de decks</title>
+    <title>Generador de Decks Pokémon TCG</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Generador de Decks </h1>
+    <h1>Generador de Decks Pokémon TCG</h1>
 
     <form id="recipeForm">
-    <div>
-        <label for="strategy">Nombre del deck:</label>
-        <input type="text" id="strategy" placeholder="Ej: dragapult">
-    </div>
-
-    <div>
-        <label>Variante:</label>
-        <div id="customSelect" class="custom-select">
-            <div class="selected">Selecciona una estrategia primero</div>
-            <div class="options"></div>
+        <div>
+            <label for="strategy">Nombre del deck:</label>
+            <input type="text" id="strategy" placeholder="Ej: dragapult">
         </div>
-    </div>
 
+        <div>
+            <label>Variante:</label>
+            <div id="customSelect" class="custom-select">
+                <div class="selected">Selecciona una estrategia primero</div>
+                <div class="options"></div>
+            </div>
+        </div>
 
         <button type="submit">Generar deck</button>
     </form>
 
+    <div id="deckResult"></div>
+
+    <h2>Cartas a NO jugar para accidentalmente arruinarle el dia a alguien</h2>
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="../receta/IMGS/Gardevoir.png" class="carousel-item active" style="height: 500px;" style="width: 200px;">
+            <img src="../receta/IMGS/Gholdengo.png" class="carousel-item" style="height: 500px;" style="width: 200px;">
+            <img src="../receta/IMGS/Crustle.png" class="carousel-item" style="height: 500px;" style="width: 200px;">
+            <img src="../receta/IMGS/M_Khangaskan.png" class="carousel-item" style="height: 500px;" style="width: 200px;">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+        <div class="indicators"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
