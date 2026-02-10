@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Esto es necesario?</title>
+    <title>Pelea de personajes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,8 +67,8 @@
                 <img src="Gonza.webp" alt="Gonzalico" />
                 <br>
                 <P id="P1Vida">Vida actual: </P>
-                <p id="P2Nivel">Nivel:</p>
-                <button onclick = "P2.recibirDanio()">Atacar</button>
+                <p id="P1Nivel">Nivel:</p>
+                <button onclick = "P2.atacar()">Atacar</button>
                 <BR>
                 <button onclick = "P1.subirnivel()">Subir Nivel</button>
             </div>
@@ -83,7 +83,7 @@
                 <br>
                 <p id ="P2Vida">Vida actual: </p>
                 <p id="P2Nivel">Nivel: </p>
-                <button onclick = "P1.recibirDanio()">Atacar</button>
+                <button onclick = "P1.atacar()">Atacar</button>
                 <br>
                 <button onclick = "P2.subirnivel()">Subir Nivel</button>
             </div>
@@ -98,29 +98,46 @@
                 this.nombre = nombre;
                 this.vida = 100;
                 this.nivel = 1;
-                
+                this.atq = this.nivel * 5;
+                this.rival = null;
             }
             atacar(){
-                return this.nombre + " está atacando";
+                // Daño extra aleatorio(no se calcula en el construct porque si no es siempre el mismo)
+                const dañoExtra = Math.floor(Math.random() * 10) + 1;
+                const dañoTotal = this.rival.atq + dañoExtra;
+                // Decidimos a quién le resta vida según el personaje
+                this.vida = this.vida - dañoTotal;
+                if (this.vida < 0) this.vida = 0;
+                actualizar();
+                return this.nombre + " está atacando y  ha hecho " + dañoTotal + "puntos de daño.";
             }
             
             subirnivel(){
-
+                this.nivel++;
+                this.atq = this.nivel * 5;
+                actualizar();
                 return this.nombre + " subió de nivel";
-            }
-            recibirDanio(cantidad){
-
-                return this.nombre + " recibió " + cantidad + " puntos de daño."
             }
         }
 
 
         function actualizar(){
-            // document.getElementById("id") 
+            document.getElementById("P1Vida").textContent = "Vida actual: " + P1.vida;
+            document.getElementById("P1Nivel").textContent = "Nivel: " + P1.nivel;
+
+            document.getElementById("P2Vida").textContent = "Vida actual: " + P2.vida;
+            document.getElementById("P2Nivel").textContent = "Nivel: " + P2.nivel;
         }
+        // Construccion de los objetos con clase Personaje
         const P1 = new Personaje("Kirk");
         const P2 = new Personaje("Gonzalo");
-        
+
+        // Cada uno apunta al otro
+        P1.rival = P2;
+        P2.rival = P1;
+
+        actualizar();
+
     </script>
 </body>
 </html>
