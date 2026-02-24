@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+</head>
+<body>
+        <h1>Introducir Productos</h1>
+        <hr>
+        Nombre:
+        <br>
+        <input type="text" required id="nombre"/> 
+        <br>
+        Precio(€):
+        <!-- Esta sección debría de aceptar solo datos numéricos -->
+        <br>
+        <input type="number" required id="precio"/>
+        <br>
+        <button onclick="anadir()">Añadir al carrito</button>
+        <button onclick="factura(carrito)">Terminar Compra</button>
+        <script src="./script.js"></script>
+</body>
+</html>
