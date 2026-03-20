@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/CampusFP/Desktop/ISO%20w10-211-linux/trabajos/Lenguajes-de-marcas/Ejercios%20lenguaje%20de%20marcas/XML/Prueba%20inicial.xsl"?>
+<!DOCTYPE videojuegos SYSTEM "file:/C:/Users/CampusFP/Desktop/ISO%20w10-211-linux/trabajos/Lenguajes-de-marcas/Ejercios%20lenguaje%20de%20marcas/XML/Prueba%20inicial.dtd">
+<videojuegos>
+  <videojuego id="1">
+    <nombre>One Piece Odissey</nombre>
+    <plataforma>Nintendo Switch</plataforma>
+    <duracion>30 horas</duracion>
+    <personajes>
+      <personaje>Luffy</personaje>
+      <personaje>Nami</personaje>
+      <personaje>Zoro</personaje>    
+    </personajes>
+    <precio>45.90</precio>    
+  </videojuego>
+  <videojuego id="2">
+    <nombre>Pokemon Z</nombre>
+    <plataforma>Nintendo Switch</plataforma>
+    <duracion>22 horas</duracion>
+    <personajes>
+      <personaje>Pikachu</personaje>
+      <personaje>Snorlax</personaje>
+      <personaje>Zampdos</personaje>
+    </personajes>
+    <precio>59.90</precio>
+    </videojuego>
+    <videojuego id="3">
+    <nombre>EA FC 2026</nombre>
+    <plataforma>Play Station</plataforma>
+    <duracion>40 horas</duracion>
+    <personajes>
+      <personaje>Silva</personaje>
+      <personaje>Mbappe</personaje>
+      <personaje>Fermín</personaje>
+    </personajes>
+    <precio>62.50</precio>    
+  </videojuego>
+</videojuegos>

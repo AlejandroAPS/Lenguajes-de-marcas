@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="videojuegos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="videojuego" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="videojuego">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="plataforma" type="xs:string"/>
+        <xs:element name="duracion" type="xs:string"/>
+        <xs:element ref="personajes"/>
+        <xs:element name="precio" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="personaje" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
