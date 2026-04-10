@@ -1,0 +1,51 @@
+[
+    {
+      "img":"IMG/Dragapult.png",
+      "name": "Dragapult ex",
+      "hp": 320,
+      "type": "Dragón",
+      "ability": false,
+      "attacks":["Turbo Cabezazo(70)","Picado Fantasma(200)"]
+    },
+    {
+      "img":"IMG/Clefairy.jpg",
+      "name": "Clefairy de Lillia ex",
+      "hp": 190,
+      "type": "Psíquico",
+      "ability": true,
+      "attacks":["Fairy Zone","Rondó Luna Llena(20+)"]
+    },
+    {
+      "img":"IMG/OgerponG.png",
+      "name": "Ogerpon máscara turquesa ex",
+      "hp": 210,
+      "type": "Planta",
+      "ability": true,
+      "attacks":["Danza Turquesa","Lluvia de Hojas(30+)"]
+    },
+    {
+      "img":"IMG/Mlucario.png",
+      "name": "Mega Lucario ex ",
+      "hp": 340,
+      "type": "Lucha",
+      "ability": false,
+      "attacks":["Puya Aural(130)","Mega Valentía(270)"]
+    },
+    {
+      "img":"IMG/Raging.webp",
+      "name": "Electrofuria",
+      "hp": 240,
+      "type": "Dragón",
+      "ability": false,
+      "attacks":["Rugido Explosivo","Bramido Atronador(70x)"]
+    },
+    {
+      "img":"IMG/arboliva.jpg",
+      "name": "Arboliva ex",
+      "hp": 310,
+      "type": "Planta",
+      "ability": false,
+      "attacks":["Artillería Aceitosa(20x6)","Disparo aromático(160)"]
+    }
+  ]
+  

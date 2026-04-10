@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta actual pokemon TCG</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    /* Aquí para empujar el footer abajo y se vea bonito em he apoyado de big gpt*/
+    #data-container {
+      flex: 1; /* empuja el footer hacia abajo */
+    }
+    .footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      border-top: 2px solid #444;
+      margin-top: auto; 
+    }
+
+    .footer p {
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+    table {
+      width: 50%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden; /* importante para que funcione el border-radius */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background-color: white;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tbody tr {
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    tbody tr:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+      transform: scale(1.01);
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Las cartas más destacadas despues de rotación (malísimo el meta)</h1>
+
+  <div id="data-container" style="text-align:center;">
+    <img src="IMG/Play!Pokemon.png" alt="Logo Play pokemon" width="200" height="200">
+    <table>
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>HP</th>
+          <th>Tipo</th>
+          <th>Tiene habilidad</th>
+          <th>Ataques / Habilidad</th>
+        </tr>
+      </thead>
+      <tbody id="data-table-body">
+        <!-- Los datos se cargarán aquí -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+  <p>© 2026 Alejandro Pérez. Todos los derechos reservados.</p>
+</footer>
+</html>
